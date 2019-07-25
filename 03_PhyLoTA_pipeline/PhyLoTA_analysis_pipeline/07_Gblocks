@@ -1,0 +1,3 @@
+#!/bin/bash
+
+Gblocks paths -t=d -e=.fas

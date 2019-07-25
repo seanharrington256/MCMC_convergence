@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+mv *.nex ../../04_NEXUS_CONVERSION
+mkdir ALIGNMENTS
+mv *.fasta ALIGNMENTS
+
+mkdir GBLOCKS_OUTPUT
+mv *.fas *.fas-e *.htm GBLOCKS_OUTPUT
+
+cd GBLOCKS_OUTPUT
+rm *.fas-e
+
+cd ../../
+mkdir ORIG_ID
+mv *.fasta ORIG_ID

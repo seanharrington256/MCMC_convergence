@@ -1,0 +1,15 @@
+#!/bin/bash
+
+./01_directoryMaker
+python 02_duplicateRemover.py
+./03_outputMover
+./04_MUSCLE_aligner
+./05_alignmentMover
+./05.1_fasta_shorten.pl -l 50 -i ../03_MUSCLE_ALIGNMENTS/ -o ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+./06_makePathsFile
+./07_Gblocks
+./08_GblocksNexusConverter
+./09_nexusMover
+python 10_jmodeltest.py
+python 11_mbb.py
+./12_analysisFilesMover

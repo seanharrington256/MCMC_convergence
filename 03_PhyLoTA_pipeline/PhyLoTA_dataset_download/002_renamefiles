@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd DATASETS
+
+find . -iname "*%0D" -exec bash -c 'mv "$0" "${0%\%0D}.fasta"' {} \;
+
+for filename in *.fasta; do 
+    [ -f "$filename" ] || continue
+    mv $filename ${filename//sql_getcluster_fasta.cgi?format=all&/}
+done
+
+for filename in *.fasta; do 
+    [ -f "$filename" ] || continue
+    mv $filename ${filename//&ntype=1/}
+done
+
+for filename in *.fasta; do 
+    [ -f "$filename" ] || continue
+    mv $filename ${filename//&/}
+done
