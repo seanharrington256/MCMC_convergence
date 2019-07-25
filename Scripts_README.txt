@@ -72,7 +72,11 @@ Folder 02_Reanalyses - contains the scripts to prep MrBayes reanalyses and summa
 		02M_02_Compare_topo_MANUAL.R - R script to compare RF distances between original and manually reanalyzed chains
 			requires functions in 01_R_functions_calculate_diagnostics_V2.R, as well as the burnin for the orignal chains from script 04_Analyze_diagnostic_output.R and the burnin for each reanalysis from 02M_01_Compare_diags_MANUAL.R
 			lines 7-12 set up directories
-	
+
+
+Folder 03_PhyLoTA_pipeline - contains scripts necessary to extract datasets from the phylota database http://sirloinpope.com/ (Sanderson et al. 2008) and conduct phylogenetic analyses. Further details are found in the readme within this directory
+
+
 Additional notes:	
 The csv file Study_names.csv indicates the study from which each analyzed dataset was obtained and is read into 04_Analyze_diagnostic_output.R to assign chains to the study they are from
 
