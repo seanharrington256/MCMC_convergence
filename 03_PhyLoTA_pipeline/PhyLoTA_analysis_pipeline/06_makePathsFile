@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd ../03_MUSCLE_ALIGNMENTS/SHORT_ID
-greadlink -f *.fasta > ../../00_SCRIPTS/paths
