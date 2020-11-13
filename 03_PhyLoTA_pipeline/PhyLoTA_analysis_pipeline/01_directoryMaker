@@ -1,7 +1,0 @@
-#!/bin/bash
-
-mkdir ../01_FASTA
-mkdir ../02_1TAXON_FASTA
-mkdir ../03_MUSCLE_ALIGNMENTS
-mkdir ../04_NEXUS_CONVERSION
-mkdir ../05_ANALYSIS_FILES
