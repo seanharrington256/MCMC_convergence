@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+
+for f in *.fas; do 
+seqmagick convert --output-format nexus --alphabet dna "$f" "${f%.fas}.nex"
+done
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+python 01_duplicateRemover.py
+./02_outputMover
+./03_n.tax
+./04_MUSCLE_aligner
+./05_alignmentMover
+./06_fasta_shorten.pl -l 15 -i ../03_MUSCLE_ALIGNMENTS/ -o ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+
+cp 07_loop.sh ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+cp 08_trim_ends_fasta.R ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+
+cd ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+bash 07_loop.sh
+cd ../../PhyLoTA_analysis_pipeline
+
+./09_nexusConverter
+./10_nexusMover
+python 11_jmodeltest.py
+python 12_mbb.py
+./13_analysisFilesMover

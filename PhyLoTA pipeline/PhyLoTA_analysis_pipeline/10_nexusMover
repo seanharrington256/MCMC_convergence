@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd ../03_MUSCLE_ALIGNMENTS/SHORT_ID
+mv *.nex ../../04_NEXUS_CONVERSION
+mkdir ALIGNMENTS
+mv *.fasta ALIGNMENTS
+
+mkdir TRIMMED_OUTPUT
+mv *.fas *.fas-e *.htm TRIMMED_OUTPUT
+
+cd TRIMMED_OUTPUT
+rm *.fas-e
+
+cd ../../
+mkdir ORIG_ID
+mv *.fasta ORIG_ID

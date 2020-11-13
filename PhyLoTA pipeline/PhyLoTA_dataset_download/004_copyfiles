@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp DATASETS/*.fasta ../01_FASTA
