@@ -601,12 +601,3 @@ read.comp.info.catch<-function(folder, trim=1, target_samp=1000, max_gens=100000
     return(fail)
   }))
 }
-
-## Write a trycatch for get_info_comp so that everything continues if something goes wrong reading in some chains
-read.comp.info.catch<-function(folder, trim=1, target_samp=1000, max_gens=10000000){
-  return(tryCatch(get_info_comp(folder, trim=trim, target_samp=target_samp, max_gens=max_gens), error=function(e) {
-    fail<-list(paste(folder, "FAILED"), e)
-    return(fail)
-  }))
-}
-
